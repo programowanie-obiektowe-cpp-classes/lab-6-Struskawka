@@ -15,13 +15,10 @@ std::vector< char > foo(std::list< Human >& people)
     for_each(people.begin(), people.end(), [](Human& ii){ii.birthday();} );
 
     vector<char>zwierzeta(people.size());
-    auto i = people.rbegin();
 
-      for(i; i!=people.rend(); i++){      
-        if(i->isMonster()) {zwierzeta.push_back('n');}
-        else {zwierzeta.push_back('y');}
-        
-    };
+    transform( people.begin(), people.end(), zwierzeta.rbegin(), 
+      [](Human& ii) {   if(ii.isMonster()) {return 'n';} else {return 'y';} } );
+  
     return zwierzeta;
     
 }
