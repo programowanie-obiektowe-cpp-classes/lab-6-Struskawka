@@ -12,7 +12,7 @@ std::vector< char > foo(std::list< Human >& people)
 {
     using namespace std;
 
-    for_each(people.rbegin(), people.rend(), birthday());
+    for_each(people.begin(), people.end(), birthday());
 
     vector<char>zwierzeta(people.size());
     auto i = people.rbegin();
