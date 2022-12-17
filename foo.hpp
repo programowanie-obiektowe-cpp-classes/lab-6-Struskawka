@@ -1,8 +1,5 @@
 
 
-    std::vector< char > ret_v(people.size());
-    return ret_v;
-
 
 #pragma once
 
